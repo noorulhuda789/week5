@@ -1,0 +1,24 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+main()
+{ 
+int a,b,c;
+cout<<"enter 1 number";
+cin>>a;
+cout<<"enter 2 number";
+cin>>b;
+cout<<"enter 3 number";
+cin>>c;
+int d=pow(b,2)
+floatf=d-4*a*c;
+float squareroot=sqrt(f);
+float e=-b+squareroot;
+float j=2*a;
+float h=e/j;
+cout<<" x is equal to " h;
+float e=-b-squareroot;
+float j=2*a;
+float h=e/j;
+cout<<" x is equal to " h;
+

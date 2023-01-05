@@ -1,0 +1,17 @@
+#include<iostrem>
+#nclude<cmath.h>
+using namespace std;
+{
+ float radian,angle;
+ int y,degree;
+cout<<"enter angle";
+cin>>degree;
+ int x;
+ cout<<"enter base";
+ cin>>x;
+  radian=degree/57.2958;
+  angle=tan(radian);
+  y=x*angle;
+ cout<<"height of tree will be " <<y;
+}
+   

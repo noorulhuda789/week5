@@ -1,0 +1,13 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+main()
+{
+int num1,num2,compare;
+ cout<<"enter first  number";
+ cin>>num1;
+ cout<<"enter 2nd number";
+ cin>>num2;
+ compare=max(num1,num2);
+ cout<<"greter number is " <<compare;
+} 
