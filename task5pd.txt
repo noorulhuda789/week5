@@ -1,0 +1,93 @@
+#include<iostream.h>
+#include<windows.h>
+char GetcharAtxy(short int x,short int y);
+void gotoxy(int,int);
+void erase(int,int);
+void maze();
+main()
+{
+  system("cls");
+  int x=4;
+  int y=4;
+  bool game=true;
+  print maze();
+  gotoxy(x,y);
+  cout<<"p";
+  while(true)
+{
+  if(GetAynscKeyState(VK_UP))
+   {
+   char  position=getCharAtxy(x,y);
+   if(position==' ')
+         {
+            erase(x,y);
+            Y=y-1;
+          gotoxy(x,Y);
+           cout<<"p";
+        }
+if(GetAynscKeyState(VK_DOWN))
+   {
+   char  position=getCharAtxy(x,y);
+   if(position==' ')
+         {
+            erase(x,y);
+            Y=Y+1;
+          gotoxy(X,Y);
+           cout<<"p";
+        }
+if(GetAynscKeyState(VK_LEFT))
+   {
+   char  position=getCharAtxy(x,y);
+   if(position==' ')
+         {
+            erase(x,y);
+            X=x-1;
+          gotoxy(X,y);
+           cout<<"p";
+        }
+if(GetAynscKeyState(VK_RIGHT))
+   {
+   char  position=getCharAtxy(x,y);
+   if(position==' ')
+         {
+            erase(x,y);
+            X=x+1;
+          gotoxy(X,y);
+           cout<<"p";
+        }
+  if(GetAsyncKey(VK_ESCAPE))
+    {
+      game =false;
+    }
+   Sleep(200);
+}
+}
+void maze()
+ {
+ cout<<"###########" <<endl;
+ cout<<"#         #" <<endl;
+ cout<<"#         # " <<endl;
+ cout<<"#         # " <<endl;
+ cout<<"#         #" <<endl;
+ cout<<"#         # " <<endl;
+ cout<<"#         #" <<endl;
+ cout<<"#         #" <<endl;
+ cout<<"##########";
+}
+void gotoxy(int x,it y)
+{
+  COORD coordinates;
+  coordinates.X=x;
+  coordinates.Y=y;
+ SetConsoleCursorPosition(GetStdHadle(STD_OUTPUT_HANDLE),coordinates);
+ }
+char GetcharAtxy(short int x,short int y)
+{
+ CHAR_INFO ci;
+ COORD xy={0,0};
+ SMALL_RECT rect={x,y,x,y};
+ COORD coordbufsize;
+ coordbufsize.X=1;
+ coordbufsize.Y=1;
+ return ReadConsoleOutput(GetStdHandle(STD_OUTPUT_HANDLE), &ci, coordbufsize,xy, &rect) ? ci.CharasciiChar : ' ';
+}

@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+main()
+{
+    string units;
+    int l,w,h;
+    cout<<"enter lenght";
+    cin>>l;
+    cout<<"enter height";
+    cin>>h;
+    cout<<"enter width";
+    cin>>w;
+    cout<<"enter units you want"
+    int v=(l*h*w)/3;
+     if(units=="centimeter")
+     {
+        int a=v*100*100*100;
+        cout<<"volume is " <<a;
+     }
+     if(units=="milimeter")
+     {
+        int a=v*1000*1000*1000
+        cout<<"volume is ";
+     }
+     if(units==kilo) 
+     {
+     int a=v/1000000000;
+     cout<<"volume in kilometer";
+     }
+      
+}

@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+main()
+{
+ int require,days,worker;
+ cout<<"enter neede hour";
+ cin>>require;
+  cout<<"enter days";
+ cin>>days;
+ cout<<"enter workers";
+ cin>>worker;
+ int reqi=days*0.1;
+ int total=reqi*10*worker;
+ int diff=total-reqire;
+ if(diff>reqire)
+{
+ cout<<"good" <<diff <<"are left";
+}
+if(diff<require)
+{
+ cout<<"not enough time" <<diff <<"require";
+}
+}
